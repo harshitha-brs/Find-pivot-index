@@ -33,3 +33,12 @@ const handleInputAndDisplayOutput = () => {
 
 // Add event listener to the submit button
 submitButton.addEventListener("click", handleInputAndDisplayOutput);
+
+// Add global event listener for keypress event
+document.addEventListener("keypress", function(event) {
+  // Check if the pressed key is Enter
+  if (event.key === "Enter") {
+    // Call the handleInputAndDisplayOutput function
+    handleInputAndDisplayOutput();
+  }
+});
